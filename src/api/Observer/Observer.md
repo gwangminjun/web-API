@@ -90,13 +90,13 @@ let callback = (entries, observer) => {
 ```
 
 ## Methods
-- IntersectionObserver.observe(targetElement) 
+- **IntersectionObserver.observe(targetElement)** 
   - 타겟 요소에 대한 관찰을 시작합니다.
-- IntersectionObserver.unobserve(targetElement)
+- **IntersectionObserver.unobserve(targetElement)**
   - 타겟 요소에 대한 관찰을 중지합니다.
-- IntersectionObserver.disconnect()
+- **IntersectionObserver.disconnect()**
   - 인스턴스의 타겟 요소들에 대한 모든 관찰을 중지합니다. 
-- IntersectionObserver.takerecords(targetElement)
+- **IntersectionObserver.takerecords(targetElement**)
   - IntersectionObserverEntry 인스턴스들의 배열을 리턴합니다. 
 
 ## useless
@@ -107,4 +107,5 @@ let callback = (entries, observer) => {
 
 ### 무한스크롤
 - 타겟 요소와 루트 요소가 원하는 임계점만큼 교차했을 때 새로운 item 들을 추가해줍니다.
+- - [codepen](https://codepen.io/ooxhapqg-the-reactor/pen/ZEPeezz)
 
