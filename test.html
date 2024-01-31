@@ -1,0 +1,37 @@
+<img src='https://via.placeholder.com/500x400'></img>
+<br>
+<img src='https://via.placeholder.com/500x400'></img>
+<br>
+<img src='https://via.placeholder.com/500x400'></img>
+<br>
+<img src='https://via.placeholder.com/500x400'></img>
+
+<script defer>
+// 옵션 생성
+const options = {
+  root: null,
+  threshold: 0.5,
+};
+
+const callback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.src =  'https://dimg.donga.com/ugc/CDB/SHINDONGA/Article/5e/0d/9f/01/5e0d9f011a9ad2738de6.jpg'
+      
+      // 지연 로딩이 실행되면 unobserve 해준다.
+      observer.unobserve(entry.target)
+    }
+  });
+};
+
+//선언
+let observer = new IntersectionObserver(callback, options);
+
+
+const imgs = document.querySelectorAll('img')
+imgs.forEach((i)=>{
+  observer.observe(i);  
+})
+
+
+</script>
